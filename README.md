@@ -1,8 +1,13 @@
-Tinkerbell Haritası: Kapsamlı SWOT Analizi ve Fizibilite Raporu
-      Giriş:
+            Tinkerbell Haritası: Kapsamlı SWOT Analizi ve Fizibilite Raporu
+
 Tinkerbell haritası, basit bir matematiksel modeldir. Kaos teorisinin temel ilkelerini göstermek için kullanılabilir. Görsel olarak çekici ve ilgi çekici bir modeldir ve karmaşık ve kaotik davranışları göstermek için kullanılabilir.
-      SWOT Analizi:
+![resim](https://github.com/ahmeterenc/YMGK-Modelling/assets/81825344/172794c6-72dd-445f-b1b7-76e16c7a4346)
+![resim](https://github.com/ahmeterenc/YMGK-Modelling/assets/81825344/41b2cac1-51ae-4f33-b69e-31e7d1f34b07)
+
+    SWOT Analizi
+
   Güçlü Yönleri:
+
 • Görsel çekicilik: 
 Tinkerbell haritası, karmaşık matematiksel kavramları görselleştirmek 
 için basit ve zarif bir yol sunar. Renkli ve ilgi çekici görselleri, 
@@ -19,7 +24,9 @@ sistemlerin temel ilkelerinin keşfedilmesini sağlar.
  Tinkerbell haritası, eğitim ve araştırmanın ötesinde çeşitli alanlarda 
 kullanılabilir. Görselleştirme, animasyon, oyun tasarımı ve hatta sanat 
 gibi alanlarda uygulama potansiyeline sahiptir.
+
 Zayıf Yönleri:
+
 • Gerçek dünya sistemlerini temsil etme:
  Tinkerbell haritası, gerçek dünya sistemlerini tam olarak temsil etmez.
  Basitleştirilmiş bir modeldir ve gerçek sistemlerin karmaşıklığını tam 
@@ -31,7 +38,9 @@ zorlaştırabilir ve modelin güvenilirliğini sorgulayabilir.
 • Yüksek boyutlu uzantılara genelleştirilememe:
  Tinkerbell haritası, düşük boyutlu sistemlere uygundur. Yüksek boyutlu 
 uzantılara genelleştirilemez, bu da modelin kullanım alanını sınırlar.
+
   Fırsatlar:
+
 • Teknolojik gelişmeler:
  Bilgisayar bilimi ve matematik alanlarındaki gelişmeler, Tinkerbell 
 haritasının daha karmaşık ve gerçekçi hale getirilmesine olanak 
@@ -47,7 +56,9 @@ Tinkerbell haritası, görselleştirme, animasyon, oyun tasarımı ve sanat
 gibi alanlarda yeni ve yaratıcı uygulamalar için kullanılabilir. Bu, 
 modelin etkisini genişletebilir ve daha geniş bir kitleye ulaşmasını 
 sağlayabilir.
+
   Tehditler:
+
 • Daha karmaşık modeller:
  Daha karmaşık ve gerçekçi modellerin geliştirilmesi, Tinkerbell 
 haritasının kullanımının azalmasına neden olabilir. Bu, modelin 
@@ -57,14 +68,19 @@ Tinkerbell haritasının çıktılarının yanlış yorumlanması, modelin yanl�
 anlaşılmasına ve hatalı sonuçlara varılmasına neden olabilir. Bu, 
 modelin güvenilirliğine zarar verebilir ve kullanımının sınırlanmasına 
 yol açabilir.
-  Fizibilite Raporu:
+
+    Fizibilite Raporu
+
 Uygulama Alanları:
+
 • Eğitim: Kaos teorisi ve dinamik sistemler hakkında bilgi vermek için kullanılabilir.
 • Araştırma: Karmaşık sistemlerin davranışını araştırmak için kullanılabilir.
 • Görselleştirme: Güzel ve ilgi çekici görseller oluşturmak için kullanılabilir.
 • Eğlence: Eğitsel oyunlar ve interaktif uygulamalar geliştirmek için kullanılabilir.
 • Sanat: Karmaşık ve kaotik sistemlerin görsel temsilleri oluşturmak için kullanılabilir.
+
 Teknik Zorluklar:
+
 • Karmaşık ve kaotik davranışları doğru şekilde simüle etmek zor olabilir.
 • Belirli parametre değerleri için kararsız ve öngörülemez olabilir.
 • Yüksek boyutlu uzantılara genelleştirilemez.Ekonomik Faktörler:
@@ -78,14 +94,18 @@ Tinkerbell haritasının karmaşıklığı ve sınırlı gerçek dünya uygulama
  nedeniyle, ticari olarak pazarlanabilir bir ürün haline getirmek zor 
 olabilir. Ancak, eğitim kurumlarına veya araştırma kuruluşlarına yönelik
  olarak ticarileştirilme potansiyeli vardır.
+
 Yasal ve Etik Hususlar:
+
 • Kullanımının herhangi bir yasal veya etik
  kısıtlaması yoktur. Tinkerbell haritası temel matematiksel bir modeldir
  ve kullanımında herhangi bir yasal veya etik sorun yoktur. Ancak, 
 modelin çıktılarının yorumlanması sırasında şeffaflık önemlidir. 
 Kullanıcıların modelin sınırlamalarını anlamaları ve sonuçlarını yanlış 
 yorumlamamaları sağlanmalıdır.
-  Sonuç:
+
+    Sonuç
+
 Tinkerbell haritası, karmaşık sistemlerin davranışını görselleştirmek ve araştırmak için kullanışlı bir araçtır. Basitliği, görsel çekiciliği ve eğitimsel değeri nedeniyle, çeşitli alanlarda uygulama potansiyeline sahiptir. Ancak, modelin sınırlamalarını anlamak ve gerçek dünya sistemlerini tam olarak temsil etmediğini unutmamak önemlidir. Gelecekteki araştırmalar, modelin karmaşıklığığını artırarak ve onu daha gerçekçi hale getirerek uygulama alanlarını genişletebilir.
 Daha İleri Araştırmalar:
 • Tinkerbell haritasının karmaşıklaştırılması ve yüksek boyutlu uzantılara genelleştirilmesi
