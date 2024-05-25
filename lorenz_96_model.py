@@ -2,7 +2,6 @@ import scipy.integrate as integrate
 import matplotlib.pyplot as plt
 import numpy as np
 
-
 def plot_L96_trajectory(N=5, F=8, x0=None, t_range=(0.0, 30.0, 0.01)):
     def L96(x, t):
         d = np.zeros(N)
@@ -15,7 +14,7 @@ def plot_L96_trajectory(N=5, F=8, x0=None, t_range=(0.0, 30.0, 0.01)):
         x0 = F * np.ones(N)
         x0[0] += 0.01
 
-    t = np.arange(*t_range)  # Unpack tuple for clarity
+    t = np.arange(t_range[0], t_range[1], t_range[2])  # Create time array
 
     # Solve ODE using odeint
     x = integrate.odeint(L96, x0, t)
@@ -30,4 +29,4 @@ def plot_L96_trajectory(N=5, F=8, x0=None, t_range=(0.0, 30.0, 0.01)):
     plt.show()
 
 # Example usage with custom parameters
-plot_L96_trajectory(N=3, F=10, x0=[1, 2, 3], t_range=(0.0, 20.0, 0.02))
+plot_L96_trajectory(N=5, F=8, x0=[1, 2, 3, 4, 5], t_range=(0.0, 20.0, 0.01))

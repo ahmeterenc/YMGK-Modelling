@@ -11,16 +11,16 @@ def plot_zaslavskii_map(a, k, iterations):
     x, y = 0.1, 0.1
 
     # Değerleri saklamak için dizi
-    x_values, y_values = [x], [y]
+    x_values, y_values = np.zeros(iterations+1), np.zeros(iterations+1)
+    x_values[0], y_values[0] = x, y
 
     # İterasyonları yap
-    for _ in range(iterations):
+    for i in range(1, iterations+1):
         x, y = zaslavskii_rotation_map(x, y, a, k)
-        x_values.append(x)
-        y_values.append(y)
+        x_values[i], y_values[i] = x, y
 
     # Sonuçları çiz
-    plt.scatter(x_values, y_values, s=1, c='b')
+    plt.plot(x_values, y_values, 'b,', markersize=1)
     plt.title('Zaslavskii Rotation Map')
     plt.xlabel('x')
     plt.ylabel('y')

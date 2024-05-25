@@ -6,7 +6,7 @@ def bernoulli_map(x, r):
     return r * x * (1 - x)
 
 # Haritayı çizmek için fonksiyon
-def plot_bernoulli_map(r, iterations=1000):
+def plot_bernoulli_map(r = 4.6, iterations=1000):
     x = np.linspace(0, 1, 1000)
     y = bernoulli_map(x, r)
 
@@ -20,6 +20,6 @@ def plot_bernoulli_map(r, iterations=1000):
     plt.show()
 
 # Harita için r değerini seçin (0 ile 4 arasında bir değer olmalı)
-r = 4.6
 
-plot_bernoulli_map(r)
+
+plot_bernoulli_map()

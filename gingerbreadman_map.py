@@ -1,26 +1,32 @@
 import matplotlib.pyplot as plt
 
-def plot_gingerbread_map(iterations=10000, x_start=0.1, y_start=0.1):
-    def gingerbread_map(x, y):
-        x_next = 1 - y + abs(x)
-        y_next = x
-        return x_next, y_next
+# Atraktörler
+a = 1
+b = 1
 
-    x = x_start
-    y = y_start
+# Başlangıç değerleri
+x = 0.1
+y = -0.1
 
-    x_points = [x]
-    y_points = [y]
+# Çizim alanını oluştur
+plt.figure(figsize=(8, 6))
+plt.xlim(-10, 10)
+plt.ylim(-10, 10)
+plt.gca().set_aspect('equal', adjustable='box')
+plt.title('Gingerbread Man Haritası')
 
-    for _ in range(iterations):
-        x, y = gingerbread_map(x, y)
-        x_points.append(x)
-        y_points.append(y)
+# İterasyonlar
+for _ in range(50000):
+    dx = 1 - a * y + b * abs(x)
+    dy = x
 
-    plt.figure(figsize=(8, 8))
-    plt.plot(x_points, y_points, 'o-', markersize=1, alpha=0.5)
-    plt.title('Gingerbread Man Haritası')
-    plt.show()
+    x = dx
+    y = dy
 
-# 1000 iterasyon ve varsayılan başlangıç noktası için çizim
-plot_gingerbread_map()
+    plt.plot(x * 10, y * 10, 'b.', markersize=1)
+
+# Sonuçları göster
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.show()

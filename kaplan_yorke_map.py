@@ -1,29 +1,29 @@
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
 
-def kaplan_yorke_map(x, r):
-    return r * x * (1 - x)
+# Sabit
+alpha = 0.2
 
-def generate_trajectory(x0, r, n):
-    trajectory = [x0]
-    for _ in range(n):
-        x_next = kaplan_yorke_map(trajectory[-1], r)
-        trajectory.append(x_next)
-    plt.plot(trajectory[:-1], trajectory[1:], 'o', markersize=1)
-    plt.xlabel('$x_n$')
-    plt.ylabel('$x_{n+1}$')
-    plt.title('Kaplan-Yorke Haritası')
-    plt.show()
-    return trajectory
+# Başlangıç değerleri
+x = 0.367812
+y = 0.667751
 
-# Başlangıç değeri
-x0 = 0.2
+# Çizim alanını oluştur
+plt.figure(figsize=(8, 6))
+plt.title('Kaplan-Yorke Haritası')
 
-# Sistem parametresi (örneğin)
-r = 2.5
+# İterasyonlar
+for _ in range(10000):
+    _x = (2 * x) % 0.99995
+    _y = alpha * y + np.cos(4 * np.pi * x)
 
-# Harita çizimi için nokta sayısı
-n = 1000
+    x = _x
+    y = _y
 
-# Harita oluşturma
-generate_trajectory(x0, r, n)
+    plt.plot(x * 100, y * 100, 'b.', markersize=1)
+
+# Sonuçları göster
+plt.xlabel('x')
+plt.ylabel('y')
+plt.grid(True)
+plt.show()

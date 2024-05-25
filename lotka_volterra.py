@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.integrate import odeint
 
-def lotka_volterra(alpha, beta, gamma, delta, prey_initial, predator_initial):
+def lotka_volterra(alpha=1.0, beta=0.1, gamma=0.1, delta=1.0, prey_initial=40, predator_initial=9):
     # Zaman noktaları
     t = np.linspace(0, 100, 1000)
 
@@ -30,13 +30,5 @@ def lotka_volterra(alpha, beta, gamma, delta, prey_initial, predator_initial):
     plt.grid(True)
     plt.show()
 
-# Kullanıcıdan parametreleri al
-alpha = float(input("Av büyüme hızını girin (alpha): "))
-beta = float(input("Yırtıcı oranını girin (beta): "))
-gamma = float(input("Yırtıcı büyüme hızını girin (gamma): "))
-delta = float(input("Yırtıcı ölüm hızını girin (delta): "))
-prey_initial = float(input("Başlangıç av popülasyonunu girin: "))
-predator_initial = float(input("Başlangıç yırtıcı popülasyonunu girin: "))
-
 # Fonksiyonu çağır
-lotka_volterra(alpha, beta, gamma, delta, prey_initial, predator_initial)
+lotka_volterra()
