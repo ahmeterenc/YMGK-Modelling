@@ -138,6 +138,26 @@ const chaos_maps = [
             "iterations",
             "keep_all"
         ]
+    },
+    {
+        id:"generate_and_save_zaslavskii_map",
+        name:"Zaslavskii Map",
+        description:"Zaslavskii haritası, George M. Zaslavsky tarafından tanıtılan ayrık zamanlı bir dinamik sistemdir. Kaotik davranış sergileyen dinamik bir sistem örneğidir. Zaslavskii haritası uçakta bir noktayı alır ve onu yeni bir noktaya eşler",
+        inputs: [
+            "a",
+            "k",
+            "iterations"
+        ]
+    },
+    {
+        id:"generate_and_save_genetic_algorithm_map",
+        name:"Genetic Algorithm Map",
+        description:"Genetik algoritma tabanlı kaotik analiz sisteminde, genetik algoritma popülasyon tabanlı bir arama yöntemi kullanarak kaotik sistemlerin davranışlarını analiz eder. Her birey, kaotik sistemin belirli bir parametre setini temsil eder ve popülasyonlar, uygunluk fonksiyonuna göre evrimleşir. Bu süreçte, çaprazlama ve mutasyon gibi genetik işlemler kullanılarak daha iyi çözümler bulunur ve kaotik dinamikler haritalandırılır.",
+        inputs: [
+            "population",
+            "generations",
+            "plaintext"
+        ]
     }
 ]
 
