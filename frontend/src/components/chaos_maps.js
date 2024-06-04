@@ -118,6 +118,26 @@ const chaos_maps = [
             "image_range",
             "num_points"
         ]
+    },
+    {
+        id:"generate_and_save_ikeda_attractor",
+        name:"Ikeda Attractor Map",
+        description:"Fizik ve matematikte Ikeda haritası, karmaşık harita tarafından verilen ayrık zamanlı dinamik bir sistemdir.",
+        inputs: [
+            "x0",
+            "y0",
+            "u"
+        ]
+    },
+    {
+        id:"arnoldcat_map",
+        name:"Arnoldcat Map",
+        description:"Matematikte, Arnold'un kedi haritası torustan kendi içine kaotik bir haritadır ve adını 1960'larda bir kedi resmi kullanarak etkilerini gösteren Vladimir Arnold'dan almıştır, dolayısıyla adı da buradan gelmektedir. Hiperbolik toral otomorfizmler için basit ve pedagojik bir örnektir.",
+        inputs: [
+            "image_data",
+            "iterations",
+            "keep_all"
+        ]
     }
 ]
 
