@@ -22,16 +22,16 @@ const ChaosMap = ({ chaosMap }) => {
     setLoading(true);
     setImage(null);
 
-    const formData = { ...this?.state?.formData };
+    const formDataCopy = { ...formData };
     for (const input of chaosMap.inputs) {
-      if (formData[input] < chaosMap.input_ranges[input].min) {
-        formData[input] = chaosMap.input_ranges[input].min;
-      } else if (formData[input] > chaosMap.input_ranges[input].max) {
-        formData[input] = chaosMap.input_ranges[input].max;
+      if (formDataCopy[input] < chaosMap.input_ranges[input].min) {
+        formDataCopy[input] = chaosMap.input_ranges[input].min;
+      } else if (formDataCopy[input] > chaosMap.input_ranges[input].max) {
+        formDataCopy[input] = chaosMap.input_ranges[input].max;
       }
     }
 
-    const response = await getChaosMapAnalysis(chaosMap.id, formData);
+    const response = await getChaosMapAnalysis(chaosMap.id, formDataCopy);
     console.log(response);
     const processedImagePath = response?.data?.plot_url;
     setImage(`${processedImagePath}`);
@@ -54,8 +54,7 @@ const ChaosMap = ({ chaosMap }) => {
       <div>
         <h1>{chaosMap.name}</h1>
         <p style={{ maxWidth: "40rem", textAlign: "justify" }}>
-          {" "}
-          {chaosMap.description}{" "}
+          {chaosMap.description}
         </p>
         <form onSubmit={handleSubmit}>
           {chaosMap?.inputs?.map((input, i) => (
@@ -66,9 +65,12 @@ const ChaosMap = ({ chaosMap }) => {
                 value={formData[input]}
                 onChange={(e) => handleInputChange(e, input)}
               />
+              <span style={{ fontSize: "0.8rem", color: "#555" }}>
+                Önerilen Girdi Aralıkları: {chaosMap.input_ranges[input].min} - {chaosMap.input_ranges[input].max}
+              </span>
             </div>
           ))}
-          <div style={{ marginTop: "1rem" }}>
+          <div style={{ marginTop: "1rem", marginBottom:'8rem'}}>
             <button className="btn" type="submit">
               Gönder
             </button>
@@ -85,4 +87,5 @@ const ChaosMap = ({ chaosMap }) => {
     </div>
   );
 };
+
 export default ChaosMap;
