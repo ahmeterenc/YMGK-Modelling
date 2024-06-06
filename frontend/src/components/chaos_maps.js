@@ -72,6 +72,30 @@ const chaos_maps = [
         }
     },
     {
+        id:"generate_and_save_zaslavskii_map",
+        name:"Zaslavskii Map",
+        description:"Zaslavskii haritası, George M. Zaslavsky tarafından tanıtılan ayrık zamanlı bir dinamik sistemdir. Kaotik davranış sergileyen dinamik bir sistem örneğidir. Zaslavskii haritası uçakta bir noktayı alır ve onu yeni bir noktaya eşler",
+        inputs: [
+            "a",
+            "k",
+            "iterations"
+        ],
+        input_ranges: {
+            a: {
+                min: 0,
+                max: 1,
+            },
+            k: {
+                min: 0,
+                max: 1,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
+    },
+    {
         id: "generate_tinkerbell_map",
         name: "Tinkerbell Map",
         description: "Tinkerbell haritası, basit bir matematiksel modeldir. Kaos teorisinin temel ilkelerini göstermek için kullanılabilir. Görsel olarak çekici ve ilgi çekici bir modeldir ve karmaşık ve kaotik davranışları göstermek için kullanılabilir.",
@@ -361,6 +385,30 @@ const chaos_maps = [
             }
         }
     },
+    {
+        id:"generate_and_save_complex_squaring_map",
+        name:"Complex Squaring Map",
+        description:"Complex-Squaring Haritası, matematikte ikinci dereceden bir polinom haritalaması olan karmaşık kare alma haritası, dinamik sistemlerdeki kaosun basit ve erişilebilir bir gösterimidir.",
+        inputs: [
+            "real_range",
+            "image_range",
+            "num_points"
+        ],
+        input_ranges: {
+            real_range : {
+                min: 0,
+                max: 1000,
+            },
+            image_range: {
+                min: 0,
+                max: 1000,
+            },
+            num_points: {
+                min: 0,
+                max: 1000,
+            }
+        }
+    }
 ];
 
 
