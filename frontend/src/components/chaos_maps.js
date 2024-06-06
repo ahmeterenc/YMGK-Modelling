@@ -1,39 +1,80 @@
-
 const chaos_maps = [
     {
-        id:"generate_and_save_bernoulli_map",
+        id: "generate_and_save_bernoulli_map",
         name: "Bernoulli Map",
-        description: "Kaostatik Bernoulli haritası, kaotik dinamik sistemler alanında önemli bir yere sahip olan basit bir ayrık zamanlı haritadır. Bu harita, basit doğrusal bir dönüşüm uygulayarak kaotik davranış sergiler. ",
+        description: "Kaostatik Bernoulli haritası, kaotik dinamik sistemler alanında önemli bir yere sahip olan basit bir ayrık zamanlı haritadır. Bu harita, basit doğrusal bir dönüşüm uygulayarak kaotik davranış sergiler.",
         inputs: [
             "r",
             "x0",
             "num_iterations",
-        ]
+        ],
+        input_ranges: {
+            r: {
+                min: 0,
+                max: 1,
+            },
+            x0: {
+                min: 0,
+                max: 1,
+            },
+            num_iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
-        id:"generate_gingerbread_map",
+        id: "generate_gingerbread_map",
         name: "Gingerbreadman Map",
         description: "Gingerbreadman metodu, karmaşıklık teorisi ve kaotik sistemlerin matematiksel analizinde önemli bir araç olarak kullanılır. Analizler, sistemlerin doğasını daha iyi anlamamıza ve belirli koşullar altında nasıl davrandıklarını öngörmemize yardımcı olabilir.",
         inputs: [
             "x_start",
             "y_start",
             "iterations",
-        ]
+        ],
+        input_ranges: {
+            x_start: {
+                min: 0,
+                max: 1,
+            },
+            y_start: {
+                min: 0,
+                max: 1,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
-        id:"generate_and_save_tent_map",
-        name:"Tent Map",
-        description:"Çadır haritası, dinamik sistemleri temsil etmek için kullanılan matematiksel bir kavramdır. Özellikle kaos teorisini incelemek için oldukça kullanışlıdır. Çadır haritası, bir boyutta uygulanan parça doğrusal bir fonksiyondur. Kullanılan μ parametresine bağlı olarak karmaşık davranışlar gösterebilir. Görsel olarak fonksiyonun grafiği bir çadır şeklini andırır, bu nedenle bu isimle anılır.",
+        id: "generate_and_save_tent_map",
+        name: "Tent Map",
+        description: "Çadır haritası, dinamik sistemleri temsil etmek için kullanılan matematiksel bir kavramdır. Özellikle kaos teorisini incelemek için oldukça kullanışlıdır. Çadır haritası, bir boyutta uygulanan parça doğrusal bir fonksiyondur. Kullanılan μ parametresine bağlı olarak karmaşık davranışlar gösterebilir. Görsel olarak fonksiyonun grafiği bir çadır şeklini andırır, bu nedenle bu isimle anılır.",
         inputs: [
             "x",
             "r",
             "iterations"
-        ]
+        ],
+        input_ranges: {
+            x: {
+                min: 0,
+                max: 1,
+            },
+            r: {
+                min: 0,
+                max: 1,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
-        id:"generate_tinkerbell_map",
-        name:"Tinkerbell Map",
-        description:"Tinkerbell haritası, basit bir matematiksel modeldir. Kaos teorisinin temel ilkelerini göstermek için kullanılabilir. Görsel olarak çekici ve ilgi çekici bir modeldir ve karmaşık ve kaotik davranışları göstermek için kullanılabilir.",
+        id: "generate_tinkerbell_map",
+        name: "Tinkerbell Map",
+        description: "Tinkerbell haritası, basit bir matematiksel modeldir. Kaos teorisinin temel ilkelerini göstermek için kullanılabilir. Görsel olarak çekici ve ilgi çekici bir modeldir ve karmaşık ve kaotik davranışları göstermek için kullanılabilir.",
         inputs: [
             "a",
             "b",
@@ -42,28 +83,90 @@ const chaos_maps = [
             "width",
             "height",
             "iterations"
-        ]
+        ],
+        input_ranges: {
+            a: {
+                min: -1,
+                max: 1,
+            },
+            b: {
+                min: -1,
+                max: 1,
+            },
+            c: {
+                min: -1,
+                max: 1,
+            },
+            d: {
+                min: -1,
+                max: 1,
+            },
+            width: {
+                min: 1,
+                max: 1000,
+            },
+            height: {
+                min: 1,
+                max: 1000,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
-        id:"generate_and_save_lorenz96_map",
-        name:"Lorenz96 Map",
-        description:"",
+        id: "generate_and_save_lorenz96_map",
+        name: "Lorenz96 Map",
+        description: "",
         inputs: [
-            "N ",
+            "N",
             "F",
             "dt",
             "num_steps"
-        ]
+        ],
+        input_ranges: {
+            N: {
+                min: 1,
+                max: 100,
+            },
+            F: {
+                min: 0,
+                max: 20,
+            },
+            dt: {
+                min: 0,
+                max: 100,
+            },
+            num_steps: {
+                min: 1,
+                max: 10000,
+            },
+        }
     },
     {
-        id:"generate_and_save_logistic_map",
-        name:"Logistic Map",
-        description:"Logistic haritası, bir populasyonun zaman içindeki değişimini modellemek için kullanılan bir matematiksel modeldir. İlk olarak 1976'da Robert May tarafından tanıtılmıştır. Bu model, belirli bir populasyonun gelecekteki durumunu tahmin etmek için kullanılırken, kaotik davranışları da gösterebilir.",
+        id: "generate_and_save_logistic_map",
+        name: "Logistic Map",
+        description: "Logistic haritası, bir populasyonun zaman içindeki değişimini modellemek için kullanılan bir matematiksel modeldir. İlk olarak 1976'da Robert May tarafından tanıtılmıştır. Bu model, belirli bir populasyonun gelecekteki durumunu tahmin etmek için kullanılırken, kaotik davranışları da gösterebilir.",
         inputs: [
             "r",
             "x0",
             "iterations"
-        ]
+        ],
+        input_ranges: {
+            r: {
+                min: 0,
+                max: 4,
+            },
+            x0: {
+                min: 0,
+                max: 1,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
         id: "generate_and_save_henon_map",
@@ -72,7 +175,17 @@ const chaos_maps = [
         inputs: [
             "a",
             "b"
-        ]
+        ],
+        input_ranges: {
+            a: {
+                min: -1.4,
+                max: 1.4,
+            },
+            b: {
+                min: -0.5,
+                max: 0.5,
+            },
+        }
     },
     {
         id: "generate_and_save_butterfly_map",
@@ -84,22 +197,58 @@ const chaos_maps = [
             "a",
             "b",
             "iterations"
-        ]
+        ],
+        input_ranges: {
+            x: {
+                min: -10,
+                max: 10,
+            },
+            y: {
+                min: -10,
+                max: 10,
+            },
+            a: {
+                min: -10,
+                max: 10,
+            },
+            b: {
+                min: -10,
+                max: 10,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
-        id:"generate_and_save_gauss_map",
-        name:"Gauss Map",
-        description:"Gauss haritası, matematikte bir yüzeyin her noktasına bir birim normal vektörü atayan bir fonksiyondur. Bu normal vektör, o noktada yüzeyin eğimine ve yönelimine ilişkin bilgi taşır. Gauss haritası, genellikle diferansiyel geometri ve topoloji gibi alanlarda kullanılır.",
+        id: "generate_and_save_gauss_map",
+        name: "Gauss Map",
+        description: "Gauss haritası, matematikte bir yüzeyin her noktasına bir birim normal vektörü atayan bir fonksiyondur. Bu normal vektör, o noktada yüzeyin eğimine ve yönelimine ilişkin bilgi taşır. Gauss haritası, genellikle diferansiyel geometri ve topoloji gibi alanlarda kullanılır.",
         inputs: [
             "r",
             "x0",
             "iterations"
-        ]
+        ],
+        input_ranges: {
+            r: {
+                min: 0,
+                max: 4,
+            },
+            x0: {
+                min: 0,
+                max: 1,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
-        id:"generate_and_save_lotka_volterra_map",
-        name:"Lotka Volterra Map",
-        description:"Lotka-Volterra Haritası, biyolojide popülasyon dinamiklerini modellemek için kullanılan bir matematiksel araçtır. Bu harita, bir yırtıcı ve bir av türünün etkileşimini tanımlar. Yırtıcı ve av popülasyonlarının her birinin büyüme oranları ve birbirlerine olan etkileşimleri, bu harita üzerindeki noktaların konumlarına bağlı olarak belirlenir.",
+        id: "generate_and_save_lotka_volterra_map",
+        name: "Lotka Volterra Map",
+        description: "Lotka-Volterra Haritası, biyolojide popülasyon dinamiklerini modellemek için kullanılan bir matematiksel araçtır. Bu harita, bir yırtıcı ve bir av türünün etkileşimini tanımlar. Yırtıcı ve av popülasyonlarının her birinin büyüme oranları ve birbirlerine olan etkileşimleri, bu harita üzerindeki noktaların konumlarına bağlı olarak belirlenir.",
         inputs: [
             "alpha",
             "beta",
@@ -107,27 +256,62 @@ const chaos_maps = [
             "delta",
             "prey_initial",
             "predator_initial"
-        ]
+        ],
+        input_ranges: {
+            alpha: {
+                min: 0,
+                max: 1,
+            },
+            beta: {
+                min: 0,
+                max: 1,
+            },
+            gamma: {
+                min: 0,
+                max: 1,
+            },
+            delta: {
+                min: 0,
+                max: 1,
+            },
+            prey_initial: {
+                min: 0,
+                max: 100,
+            },
+            predator_initial: {
+                min: 0,
+                max: 100,
+            },
+        }
     },
     {
-        id:"generate_and_save_complex_squaring_map",
-        name:"Complex Squaring Map",
-        description:"Complex-Squaring Haritası, matematikte ikinci dereceden bir polinom haritalaması olan karmaşık kare alma haritası, dinamik sistemlerdeki kaosun basit ve erişilebilir bir gösterimidir.",
-        inputs: [
-            "real_range",
-            "image_range",
-            "num_points"
-        ]
-    },
-    {
-        id:"generate_and_save_ikeda_attractor",
-        name:"Ikeda Attractor Map",
-        description:"Fizik ve matematikte Ikeda haritası, karmaşık harita tarafından verilen ayrık zamanlı dinamik bir sistemdir.",
+        id: "generate_and_save_ikeda_attractor",
+        name: "Ikeda Attractor Map",
+        description: "Fizik ve matematikte Ikeda haritası, karmaşık harita tarafından verilen ayrık zamanlı dinamik bir sistemdir.",
         inputs: [
             "x0",
             "y0",
-            "u"
-        ]
+            "u",
+            "iterations"
+        ],
+        input_ranges: {
+            x0: {
+                min: 0,
+                max: 1,
+            },
+            y0: {
+                min: 0,
+                max: 1,
+            },
+            u: {
+                min: 0,
+                max: 1,
+            },
+            iterations: {
+                min: 1,
+                max: 1000,
+            },
+        }
     },
     {
         id:"arnoldcat_map",
@@ -137,17 +321,21 @@ const chaos_maps = [
             "image_data",
             "iterations",
             "keep_all"
-        ]
-    },
-    {
-        id:"generate_and_save_zaslavskii_map",
-        name:"Zaslavskii Map",
-        description:"Zaslavskii haritası, George M. Zaslavsky tarafından tanıtılan ayrık zamanlı bir dinamik sistemdir. Kaotik davranış sergileyen dinamik bir sistem örneğidir. Zaslavskii haritası uçakta bir noktayı alır ve onu yeni bir noktaya eşler",
-        inputs: [
-            "a",
-            "k",
-            "iterations"
-        ]
+        ],
+        input_ranges: {
+            image_data: {
+                min: 0,
+                max: 100,
+            },
+            iterations: {
+                min: 0,
+                max: 1000,
+            },
+            keep_all: {
+                min: 0,
+                max: 100,
+            }
+        }
     },
     {
         id:"generate_and_save_genetic_algorithm_map",
@@ -157,8 +345,23 @@ const chaos_maps = [
             "population",
             "generations",
             "plaintext"
-        ]
-    }
-]
+        ],
+        input_ranges: {
+            population : {
+                min: 0,
+                max: 1000,
+            },
+            generations: {
+                min: 0,
+                max: 1000,
+            },
+            plaintext: {
+                min: 0,
+                max: 1000,
+            }
+        }
+    },
+];
 
-export default chaos_maps;
+
+export default chaos_maps
