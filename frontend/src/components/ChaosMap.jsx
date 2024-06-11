@@ -34,7 +34,7 @@ const ChaosMap = ({ chaosMap }) => {
     const response = await getChaosMapAnalysis(chaosMap.id, formDataCopy);
     console.log(response);
     const processedImagePath = response?.data?.plot_url;
-    setImage(`${processedImagePath}`);
+    setImage(`${processedImagePath.replace(/\\/g, "/")}`);
     setLoading(false);
   };
 
@@ -49,8 +49,10 @@ const ChaosMap = ({ chaosMap }) => {
     return <div>Loading...</div>;
   }
 
+  console.log(formData);
+
   return (
-    <div className="map-item" style={{display:'flex'}}>
+    <div className="map-item" style={{ display: "flex", marginBottom: "4rem" }}>
       <div>
         <h1>{chaosMap.name}</h1>
         <p style={{ maxWidth: "40rem", textAlign: "justify" }}>
@@ -66,21 +68,29 @@ const ChaosMap = ({ chaosMap }) => {
                 onChange={(e) => handleInputChange(e, input)}
               />
               <span style={{ fontSize: "0.8rem", color: "#555" }}>
-                Önerilen Girdi Aralıkları: {chaosMap.input_ranges[input].min} - {chaosMap.input_ranges[input].max}
+                Önerilen Girdi Aralıkları: {chaosMap.input_ranges[input].min} -{" "}
+                {chaosMap.input_ranges[input].max}
               </span>
             </div>
           ))}
-          <div style={{ marginTop: "1rem", marginBottom:'8rem'}}>
+          <div style={{ marginTop: "1rem", marginBottom: "8rem" }}>
             <button className="btn" type="submit">
               Gönder
             </button>
           </div>
         </form>
       </div>
-      <div>
+      <div style={{ marginLeft: "2rem" }}>
         {image && (
           <div>
-            <img src={image} alt={"sdfsd"} />
+            <img
+              src={
+                image.startsWith("http")
+                  ? image
+                  : `http://localhost:8000/${image}`
+              }
+              alt={"sdfsd"}
+            />
           </div>
         )}
       </div>
